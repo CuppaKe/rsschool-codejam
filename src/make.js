@@ -9,7 +9,7 @@ module.exports = function make() {
   array.push(...arguments);
   const f = (...arg) => {
     array.push(...arg);
-    return typeof arg[arg.length - 1] !== 'function' ? f : array.slice(0, -1).reduce(arg[arg.length - 1], 0);
+    return typeof arg[arg.length - 1] !== 'function' ? f : array.slice(0, -1).reduce(arg[arg.length - 1]);
   };
   return f;
 }

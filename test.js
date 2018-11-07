@@ -33,6 +33,11 @@ describe('makeSum', () => {
     const solution = make(15)(34, 21, 666)(41)(23, sum);
     assert.deepEqual(solution, 800);
   });
+  it('4', () => {
+    const mult = (a, b) => a * b;
+    const solution = make(1)(2, 3, 4)(mult);
+    assert.deepEqual(solution, 24);
+  });
 });
 
 describe('recursion', () => {
